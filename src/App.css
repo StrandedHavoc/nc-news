@@ -50,3 +50,20 @@ nav {
   max-height: 55px;
   margin-top: 0px;
 }
+
+.author {
+  padding: 1em;
+}
+
+.title {
+  padding: 1em;
+}
+.article-body {
+  padding: 1em;
+}
+.topic {
+  padding: 1em;
+}
+.votes {
+  padding: 1em;
+}

@@ -6,11 +6,14 @@ const SingleArticle = () => {
   const [article, setArticle] = useState({});
   const { article_id } = useParams();
   const [apiError, setApiError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true)
+
   
   useEffect(() => {
       getArticleById(article_id)
       .then((articleData) => {
         setArticle(articleData);
+        setIsLoading(false)
       })
       .catch((error) => {
         setApiError(error);
@@ -26,13 +29,17 @@ const SingleArticle = () => {
     );
   }
 
+  if (isLoading) {
+    return <p>Loading...</p>
+  }
+
   return <p>
-    <strong>{article.title}</strong><br /><br />
+    <b className="article-title">{article.title}</b><br /><br />
   <img src={article.article_img_url} alt="article image "></img><br />
-  By {article.author}<br /><br />
-  {article.body}<br /><br />
-  Topic: {article.topic}<br /><br />
-  Votes: {article.votes}<br />
+  <span className="author">By {article.author}</span><br /><br />
+  <span className="article-body">{article.body}</span><br /><br />
+  <span className="topic">Topic: {article.topic}</span><br /><br />
+  <span className="votes">Votes: {article.votes}</span><br />
   </p>;
 };
 
