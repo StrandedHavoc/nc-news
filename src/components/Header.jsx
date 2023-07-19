@@ -1,4 +1,4 @@
-import coffee from "/home/yoosuf/frontend/nc-news/src/coffee.png";
+import coffee from "../pictures/coffee.png";
 
 const Header = () => {
   return (
