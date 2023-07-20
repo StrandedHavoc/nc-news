@@ -7,7 +7,7 @@ const ArticleCard = ({ title, article_img_url, votes, article_id }) => {
         <b>{title}</b>
         <br />
         <br />
-        <img src={article_img_url} alt="article thumbnail"></img> <br />
+        <img src={article_img_url} alt={title}></img> <br />
         Votes: {votes}
       </div>
       </Link>

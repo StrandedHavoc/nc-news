@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/articles/:article_id" element={<SingleArticle />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer className="footer" />
     </main>

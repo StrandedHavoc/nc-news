@@ -19,8 +19,19 @@ export const getArticles = () => {
 export const getArticleById = (article_id) => {
     return newsApi
     .get(`/articles/${article_id}`)
+    .then(({data}) => {
+        return data.article
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+}
+
+export const getComments = (article_id) => {
+    return newsApi
+    .get(`/articles/${article_id}/comments`)
     .then((res) => {
-        return res.data.article
+        return res.data.comments
     })
     .catch((error) => {
         console.log(error)
