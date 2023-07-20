@@ -86,3 +86,20 @@ nav {
 .comment-body {
   padding: 1em;
 }
+
+.like-button {
+  background-color: cornflowerblue;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  margin-left: 1em;
+  max-width: 4em;
+  max-height: 2.2em;
+  text-align: center;
+}
+
+.likes-count {
+  font-weight: 500;
+  margin-left: 0.5em;
+}

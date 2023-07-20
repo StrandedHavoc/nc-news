@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleById } from "../utils/api";
 import CommentCard from "./CommentsCard";
+import Error from "./Error";
 
 const SingleArticle = () => {
   const [article, setArticle] = useState({});

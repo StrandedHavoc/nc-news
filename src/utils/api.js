@@ -11,9 +11,6 @@ export const getArticles = () => {
     .then(({data}) => {
         return data.articles
     })
-    .catch((error) => {
-        console.log(error)
-    })
 }
 
 export const getArticleById = (article_id) => {
@@ -22,9 +19,6 @@ export const getArticleById = (article_id) => {
     .then(({data}) => {
         return data.article
     })
-    .catch((error) => {
-        console.log(error)
-    })
 }
 
 export const getComments = (article_id) => {
@@ -32,8 +26,5 @@ export const getComments = (article_id) => {
     .get(`/articles/${article_id}/comments`)
     .then((res) => {
         return res.data.comments
-    })
-    .catch((error) => {
-        console.log(error)
     })
 }
