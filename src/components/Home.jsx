@@ -4,7 +4,8 @@ import ArticleCard from "./ArticleCard";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
+  const [apiError, setApiError] = useState(null)
 
   useEffect(() => {
     getArticles()
@@ -13,12 +14,21 @@ const Home = () => {
         setIsLoading(false)
       })
       .catch((error) => {
-        console.log(error);
+        setApiError(error);
       });
   }, []);
 
   if (isLoading) {
     return <p>Loading articles...</p>
+  }
+
+  if (apiError) {
+    return (
+      <Error
+        errorStatus={apiError.response.status}
+        errorMessage={apiError.response.data.msg}
+      />
+    );
   }
 
   return (

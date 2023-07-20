@@ -1,10 +1,12 @@
 import { getComments } from "../utils/api";
 import { useEffect, useState } from "react";
+import Vote from "./Vote";
 
 const CommentsCard = ({ article_id }) => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [apiError, setApiError] = useState(null);
+  const [votes, setVotes] = useState()
 
 
   useEffect(() => {
@@ -12,6 +14,7 @@ const CommentsCard = ({ article_id }) => {
       .then((res) => {
         setComments(res);
         setIsLoading(false)
+        setVotes()
       })
       .catch((error) => {
         setApiError(error)
@@ -44,7 +47,7 @@ const CommentsCard = ({ article_id }) => {
               <br />
               <span className="author">@{author}</span>
               <br />
-              <span className="votes">Votes: {votes}</span>
+              <span><Vote votes={votes}/></span>
             </li>
           )} else {
             return(<p>No comments for this article</p>)
