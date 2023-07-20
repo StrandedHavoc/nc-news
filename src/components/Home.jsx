@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
 
   if (isLoading) {
-    return <p>Loading...</p>
+    return <p>Loading articles...</p>
   }
 
   return (

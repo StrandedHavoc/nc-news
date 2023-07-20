@@ -30,7 +30,7 @@ const SingleArticle = () => {
   }
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p>Loading article...</p>;
   }
 
   return (
