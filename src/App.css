@@ -93,6 +93,7 @@ nav {
   padding-right: 0.5em;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
+  margin-top: 0.5em;
   margin-left: 1em;
   max-width: 4em;
   max-height: 2.2em;
@@ -103,3 +104,35 @@ nav {
   font-weight: 500;
   margin-left: 0.5em;
 }
+
+.comment-form {
+  display: grid;
+  padding-left: 2em;
+}
+
+#comment-box {
+  width: 90%;
+  height: 10vh;
+  padding: 1em;
+  margin-bottom: 1em;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;  
+}
+
+#comment-header {
+  text-align: left;
+  padding-left: 1em;
+  margin-left: 1em;
+}
+
+.comment-button {
+  width: 20%;
+  background-color: rgb(41, 74, 146);
+  color: blanchedalmond;
+}
+
+#countdown {
+  text-align: left;
+}
+

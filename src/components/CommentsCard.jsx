@@ -1,12 +1,13 @@
 import { getComments } from "../utils/api";
 import { useEffect, useState } from "react";
 import Vote from "./Vote";
+import PostComment from "./PostComment";
 
 const CommentsCard = ({ article_id }) => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [apiError, setApiError] = useState(null);
-  const [votes, setVotes] = useState()
+  // const [votes, setVotes] = useState()
 
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const CommentsCard = ({ article_id }) => {
       .then((res) => {
         setComments(res);
         setIsLoading(false)
-        setVotes()
+        // setVotes()
       })
       .catch((error) => {
         setApiError(error)
@@ -36,8 +37,9 @@ const CommentsCard = ({ article_id }) => {
 
   return (
     <section className="comments">
-      <b>Comments</b>
+      <h2>Comments</h2>
       <ul className="comments-list">
+      <PostComment article_id={article_id} comments={comments}/>
         {comments.map((comment) => {
           if (comment) {
           const { comment_id, body, votes, author } = comment;
