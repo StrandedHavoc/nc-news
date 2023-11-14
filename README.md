@@ -7,11 +7,11 @@ View all articles.
 View a specific article.
 View, post and delete comments.
 like or dislike an article.
-Create new topic.
-Create new User by sing up.
+Create a new topic.
+Create a new User by signing up.
 Back End Github link: https://github.com/StrandedHavoc/be-news-project
 Node Version
-Minimum version of node required to run this project locally Node version: v20.2.0 . If you want to see your node version, run this in the terminal:
+Minimum version of node required to run this project locally Node version: v20.2.0. If you want to see your node version, run this in the terminal:
 
 node - v
 or
@@ -27,4 +27,4 @@ npm run dev
 or
 npm run dev -- --host
 
-Thank you for taking your time out to check out my project. Please feel free to reach out to me if you have any questions or feedback.
+Thank you for taking the time to check out my project. Please feel free to reach out to me if you have any questions or feedback.
